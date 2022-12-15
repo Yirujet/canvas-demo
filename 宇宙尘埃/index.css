@@ -1,0 +1,168 @@
+.disc {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .8);
+}
+.disc .disc-container {
+    position: absolute;
+    width: 720px;
+    height: 720px;
+    line-height: 720px;
+    top: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    /* background-color: rgba(0, 0, 0, .8); */
+}
+.disc .disc-container .disc-bg {
+    position: absolute;
+    width: 475px;
+    height: 475px;
+    background-image: url(../dist/playPage/disc/diskImg.png);
+    background-size: contain;
+    border: 0;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.disc .disc-container .rotate-container {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-image: url('./assets/aboli.jfif');
+    background-size: contain;
+    border: 0;
+    border-radius: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+    left: 50%;
+    top: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    z-index: 10;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    animation-name: rotate-poster;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    /* animation-fill-mode: forwards; */
+    -webkit-animation-name: rotate-poster;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-iteration-count: infinite;
+    /* -webkit-animation-fill-mode: forwards; */
+    transform-origin: center center;
+}
+@keyframes rotate-poster {
+    0% {
+        /* transform: rotate(0deg);
+        -webkit-transform: rotate(0deg); */
+    }
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes rotate-poster {
+    0% {
+        /* transform: rotate(0deg);
+        -webkit-transform: rotate(0deg); */
+    }
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+.disc .disc-container .rotate-container-pause {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-size: contain;
+    border: 0;
+    border-radius: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+    left: 50%;
+    top: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .8);
+    z-index: 10;
+}
+.disc .disc-container .disc-pointer-play {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    right: 0;
+    margin-top: -100px;
+    background-image: url(../dist/playPage/disc/diskPointer.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotateZ(0deg);
+    -webkit-transform: rotateZ(0deg);
+    -webkit-transform-origin-x: left;
+    -webkit-transform-origin-y: top;
+    animation: disc-pointer-play 1s ease-in .2s 1 forwards;
+    -webkit-animation: disc-pointer-play 1s ease-in .2s 1 forwards;
+}
+@keyframes disc-pointer-play {
+    0% {
+        transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(25deg);
+        -webkit-transform: rotateZ(25deg);
+    }
+}
+@-webkit-keyframes disc-pointer-play {
+    0% {
+        transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(25deg);
+        -webkit-transform: rotateZ(25deg);
+    }
+}
+.disc .disc-container .disc-pointer-pause {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    right: 0;
+    margin-top: -100px;
+    background-image: url(../dist/playPage/disc/diskPointer.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotateZ(25deg);
+    -webkit-transform: rotateZ(25deg);
+    -webkit-transform-origin-x: left;
+    -webkit-transform-origin-y: top;
+    animation: disc-pointer-pause 1s ease-in .2s 1 forwards;
+    -webkit-animation: disc-pointer-pause 1s ease-in .2s 1 forwards;
+}
+@keyframes disc-pointer-pause {
+    0% {
+        transform: rotateZ(25deg);
+        -webkit-transform: rotateZ(25deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+}
+@-webkit-keyframes disc-pointer-pause {
+    0% {
+        transform: rotateZ(25deg);
+        -webkit-transform: rotateZ(25deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+}
