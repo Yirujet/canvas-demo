@@ -23,7 +23,7 @@ if (ctx) {
         static DELAY = 20
         static MIN_SCALE = 2
         static MAX_SCALE = 20
-        static HEART_COUNT = 100
+        static HEART_COUNT = 10
         static MAX_LINE_WIDTH = 2
         
         constructor() {
